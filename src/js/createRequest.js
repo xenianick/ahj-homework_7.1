@@ -1,15 +1,15 @@
 export default async function createRequest(instance, method) {
   const params = new URLSearchParams();
-  let url = 'http://localhost:7070/tickets';
+  let url = 'https://ahj-homework-7-1-7-2.herokuapp.com/tickets';
   const request = new Promise((resolve) => {
     Object.entries(instance).forEach(([key, value]) => {
       params.append(key, value);
     });
     if (method === 'GET' || method === 'DELETE') {
-      url = `http://localhost:7070/tickets/:${params}`;
+      url = `https://ahj-homework-7-1-7-2.herokuapp.com/tickets/:${params}`;
     }
     if (method === 'GET' && instance === '') {
-      url = 'http://localhost:7070/tickets';
+      url = 'https://ahj-homework-7-1-7-2.herokuapp.com/tickets';
     }
     const xhr = new XMLHttpRequest();
     xhr.open(method, url);
