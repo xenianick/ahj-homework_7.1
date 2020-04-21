@@ -7,6 +7,7 @@
   "license": "ISC",
   "private": false,
   "scripts": {
+    "prestart": "yarn add",
     "start": "forever src/js/__server/server.js",
     "watch": "forever -w src/js/__server/server.js",
     "webpack": "webpack-dev-server --mode development",
@@ -15,6 +16,9 @@
     "lint": "eslint .",
     "test": "jest --testPathPattern=./unit/",
     "coverage": "jest --testPathPattern=./unit/ --coverage"
+  },
+  "engines": {
+    "node": "11.x"
   },
   "repository": {
     "type": "git",
