@@ -7,7 +7,7 @@
   "license": "ISC",
   "private": false,
   "scripts": {
-    "prestart": "yarn add",
+    "prestart": "npm install",
     "start": "forever src/js/__server/server.js",
     "watch": "forever -w src/js/__server/server.js",
     "webpack": "webpack-dev-server --mode development",
