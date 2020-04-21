@@ -5,11 +5,14 @@ export default async function createRequest(instance, method) {
     Object.entries(instance).forEach(([key, value]) => {
       params.append(key, value);
     });
-    if (method === 'GET' || method === 'DELETE') {
-      url = `https://ahj-homework-7-1-7-2.herokuapp.com/tickets/:${params}`;
-    }
     if (method === 'GET' && instance === '') {
       url = 'https://ahj-homework-7-1-7-2.herokuapp.com/tickets';
+    }
+    if (method === 'GET' && instance !== '') {
+      url = `https://ahj-homework-7-1-7-2.herokuapp.com/tickets/:${params}`;
+    }
+    if (method === 'DELETE') {
+      url = `https://ahj-homework-7-1-7-2.herokuapp.com/tickets/:${params}`;
     }
     const xhr = new XMLHttpRequest();
     xhr.open(method, url);

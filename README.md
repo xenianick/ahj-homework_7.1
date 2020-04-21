@@ -3,3 +3,6 @@
 
 ## Site
 [Tap me](https://xenianick.github.io/ahj-homework_7.1-7.2/)
+
+## Server
+[Tap me](https://ahj-homework-7-1-7-2.herokuapp.com/)
